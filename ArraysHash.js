@@ -25,10 +25,53 @@ var containsDuplicate = function(nums) {
 var isAnagram = function(s, t) {
 
 
-    return s.split('').sort().join('') === t.split('').sort().join('')
+    // return s.split('').sort().join('') === t.split('').sort().join('')
+
+    const hash1 = {}
+    const hash2 = {}
+
+    // const firstWord = s.split("")
+    // const secondWord = t.split("")
+
+    for (let i = 0; i < s.length; i++) {
+        if (!hash1[s[i]]) {
+            hash1[s[i]] = 1
+        } else {
+            hash1[s[i]] += 1
+        }
+    }
+
+    for (let i = 0; i < t.length; i++) {
+        if (!hash2[t[i]]) {
+            hash2[t[i]] = 1
+        } else {
+            hash2[t[i]] += 1
+        }
+    }
+    // console.log(hash1)
+    // console.log(hash2)
+    // return hash1 === hash2
 };
 
 
 // s = "anagram", t = "nagaram"
-s = "rat", t = "car"
-console.log(isAnagram(s, t))
+// s = "rat", t = "car"
+// console.log(isAnagram(s, t))
+
+// 3. Two Sum
+
+var twoSum = function(nums, target) {
+    
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j]
+            }
+        }
+    }
+};
+
+// nums = [2,7,11,15], target = 9
+// nums = [3,2,4], target = 6
+// nums = [3,3], target = 6
+// console.log(twoSum(nums, target))
