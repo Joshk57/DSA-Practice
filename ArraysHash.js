@@ -75,3 +75,30 @@ var twoSum = function(nums, target) {
 // nums = [3,2,4], target = 6
 // nums = [3,3], target = 6
 // console.log(twoSum(nums, target))
+
+var groupAnagrams = function(strs) {
+    let newArr = []
+
+
+    for (let i = 0; i < strs.length; i++) {
+        let arrTwo = [strs[i]]
+        // console.log(strs[i])
+        for (let j = i+ 1; j < strs.length-1; j++) {
+            // console.log(strs[j])
+            if (anagramHelper(strs[i], strs[j])) {
+                arrTwo.push(strs[j])
+            }
+        }
+        newArr.push(arrTwo)
+    }
+    return newArr
+};
+
+const anagramHelper = function(str1, str2) {
+    str1.split("").reverse().join("") === str2.split("").reverse().join("")
+}
+
+strs = ["eat","tea","tan","ate","nat","bat"]
+// strs = [""]
+// strs = ["a"]
+console.log(groupAnagrams(strs))
