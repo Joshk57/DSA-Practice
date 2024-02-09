@@ -26,7 +26,7 @@ var twoSum = function(numbers, target) {
     }
 };
 
-numbers = [2,7,11,15], target = 9
-numbers = [2,3,4], target = 6
-numbers = [-1,0], target = -1
-console.log(twoSum(numbers, target))
+// numbers = [2,7,11,15], target = 9
+// numbers = [2,3,4], target = 6
+// numbers = [-1,0], target = -1
+// console.log(twoSum(numbers, target))
