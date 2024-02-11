@@ -30,3 +30,24 @@ var twoSum = function(numbers, target) {
 // numbers = [2,3,4], target = 6
 // numbers = [-1,0], target = -1
 // console.log(twoSum(numbers, target))
+
+var threeSum = function(nums) {
+
+    let triplets = []
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            for (let k = j + 1; k < nums.length; k++) {
+                if ((nums[i] + nums[j] + nums[k]) === 0) {
+                    triplets.push([nums[i], nums[j], nums[k]])
+                }
+            }
+        }
+    }
+    return triplets
+}
+
+nums = [-1,0,1,2,-1,-4]
+// nums = [0,1,1]
+// nums = [0,0,0]
+console.log(threeSum(nums))
