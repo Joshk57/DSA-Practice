@@ -31,6 +31,8 @@ var twoSum = function(numbers, target) {
 // numbers = [-1,0], target = -1
 // console.log(twoSum(numbers, target))
 
+
+// redo, first problem shows the same three numbers twice
 var threeSum = function(nums) {
 
     let triplets = []
