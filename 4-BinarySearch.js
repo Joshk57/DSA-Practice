@@ -60,8 +60,27 @@ var minEatingSpeed = function(piles, h) {
     return k;
 };
 
-piles = [3,6,7,11], h = 8
+// piles = [3,6,7,11], h = 8
 // piles = [30,11,23,4,20], h = 5
 // piles = [30,11,23,4,20], h = 6
 
-console.log(minEatingSpeed(piles, h))
+// console.log(minEatingSpeed(piles, h))
+
+
+
+// Find Minimum in Rotated Sorted Array
+
+var findMin = function(nums) {
+    
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > nums[i+1]) {
+            return nums[i+1]
+        }
+    }
+    return nums[0]
+};
+
+// nums = [3,4,5,1,2]
+// nums = [4,5,6,7,0,1,2]
+nums = [11,13,15,17]
+console.log(findMin(nums))
