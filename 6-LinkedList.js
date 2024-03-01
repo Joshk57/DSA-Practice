@@ -39,7 +39,31 @@ var mergeTwoLists = function(list1, list2) {
 };
 
 
-list1 = [1,2,4], list2 = [1,3,4]
+// list1 = [1,2,4], list2 = [1,3,4]
 // list1 = [], list2 = []
 // list1 = [], list2 = [0]
-console.log(mergeTwoLists(list1, list2))
+// console.log(mergeTwoLists(list1, list2))
+
+
+// Reorder list
+
+// come back and reattempt
+var reorderList = function(head) {
+    
+    let newHead = []
+
+    for (let i = 0; i < head.length; i++) {
+        if (i === 0) {
+            newHead.push(head[i])
+
+            if (i === (head.length - 1)) {
+                newHead.push(head[head.length-1])
+            }
+        } 
+    }
+    return newHead
+};
+
+head = [1,2,3,4]
+// head = [1,2,3,4,5]
+console.log(reorderList(head))
