@@ -125,6 +125,28 @@ var topKFrequent = function(nums, k) {
     
 };
 
-nums = [7,7,7,7,7,1,1,1,2,2,3], k = 2
+nums = [1,1,1,2,2,3], k = 2
 // nums = [1], k = 1
-console.log(topKFrequent(nums, k))
+// console.log(topKFrequent(nums, k))
+
+
+
+
+// Product of Array Except Self
+var productExceptSelf = function(nums) {
+    
+    const newArr = []
+
+    for ( let i = 0; i < nums.length; i++) {
+
+        let num = nums[i+1]
+        for ( let j = i + 1; j < nums.length; j++) {
+            
+        }
+    }
+    return newArr
+};
+
+nums = [1,2,3,4]
+// nums = [-1,1,0,-3,3]
+console.log(productExceptSelf(nums))
