@@ -101,4 +101,30 @@ const anagramHelper = function(str1, str2) {
 strs = ["eat","tea","tan","ate","nat","bat"]
 // strs = [""]
 // strs = ["a"]
-console.log(groupAnagrams(strs))
+// console.log(groupAnagrams(strs))
+
+
+
+
+
+
+// Top K Frequent Elements
+
+var topKFrequent = function(nums, k) {
+    
+    const freqNums = {}
+
+    for (let i = 0; i < nums.length; i++) {
+        if (!freqNums[nums[i]]) {
+            freqNums[nums[i]] = 1
+        } else {
+            freqNums[nums[i]] += 1
+        }
+    }
+    
+    
+};
+
+nums = [7,7,7,7,7,1,1,1,2,2,3], k = 2
+// nums = [1], k = 1
+console.log(topKFrequent(nums, k))
