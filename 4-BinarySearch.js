@@ -82,5 +82,23 @@ var findMin = function(nums) {
 
 // nums = [3,4,5,1,2]
 // nums = [4,5,6,7,0,1,2]
-nums = [11,13,15,17]
-console.log(findMin(nums))
+// nums = [11,13,15,17]
+// console.log(findMin(nums))
+
+// Search in Rotated Sorted Array
+
+var search = function(nums, target) {
+
+    for ( let i = 0; i < nums.length; i++) {
+        if (nums[i] === target) {
+            return i
+        }
+    }
+    return -1
+};
+
+
+nums = [4,5,6,7,0,1,2], target = 0
+// nums = [4,5,6,7,0,1,2], target = 3
+// nums = [1], target = 0
+console.log(search(nums, target))
