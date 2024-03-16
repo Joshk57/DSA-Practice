@@ -64,6 +64,7 @@ cost = [10,15,20]
 
 // House Robber
 
+// still need to finish
 var rob = function(nums) {
     
     let oddSum = 0
