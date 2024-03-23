@@ -59,23 +59,40 @@ nums = [-1,0,1,2,-1,-4]
 
 var maxArea = function(height) {
     
-    let area = 0
-    for (let i = 0; i < height.length; i++) {
-        for (let j = i + 1; j < height.length; j++) {
-            if (height[i] >= height[j]) {
-                let currArea = height[j] * (j - i)
-                if (currArea > area) {
-                    area = currArea
-                }
-            } else {
-                let currArea2 = height[i] * (j - i)
-                if (currArea2 > area) {
-                    area = currArea2
-                }
-            }
+    // let area = 0
+    // for (let i = 0; i < height.length; i++) {
+    //     for (let j = i + 1; j < height.length; j++) {
+    //         if (height[i] >= height[j]) {
+    //             let currArea = height[j] * (j - i)
+    //             if (currArea > area) {
+    //                 area = currArea
+    //             }
+    //         } else {
+    //             let currArea2 = height[i] * (j - i)
+    //             if (currArea2 > area) {
+    //                 area = currArea2
+    //             }
+    //         }
+    //     }
+    // }
+    // return area
+
+    let maxArea = 0;
+    let left = 0;
+    let right = height.length - 1;
+    
+    while (left < right) {
+        const minHeight = Math.min(height[left], height[right]);
+        maxArea = Math.max(maxArea, minHeight * (right - left));
+        
+        if (height[left] < height[right]) {
+            left++;
+        } else {
+            right--;
         }
     }
-    return area
+    
+    return maxArea;
 };
 
 // height = [1,8,6,2,5,4,8,3,7]
