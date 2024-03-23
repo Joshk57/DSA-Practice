@@ -116,4 +116,16 @@ var dailyTemperatures = function(temperatures) {
 temperatures = [73,74,75,71,69,72,76,73]
 // temperatures = [30,40,50,60]
 // temperatures = [30,60,90]
-console.log(dailyTemperatures(temperatures))
+// console.log(dailyTemperatures(temperatures))
+
+
+// Car Fleet
+
+var carFleet = function(target, position, speed) {
+    
+};
+
+target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]
+// target = 10, position = [3], speed = [3]
+// target = 100, position = [0,2,4], speed = [4,2,1]
+console.log(carFleet(target, position, speed))
