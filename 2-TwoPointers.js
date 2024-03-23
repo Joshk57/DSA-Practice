@@ -52,4 +52,32 @@ var threeSum = function(nums) {
 nums = [-1,0,1,2,-1,-4]
 // nums = [0,1,1]
 // nums = [0,0,0]
-console.log(threeSum(nums))
+// console.log(threeSum(nums))
+
+
+// Container with most water
+
+var maxArea = function(height) {
+    
+    let area = 0
+    for (let i = 0; i < height.length; i++) {
+        for (let j = i + 1; j < height.length; j++) {
+            if (height[i] >= height[j]) {
+                let currArea = height[j] * (j - i)
+                if (currArea > area) {
+                    area = currArea
+                }
+            } else {
+                let currArea2 = height[i] * (j - i)
+                if (currArea2 > area) {
+                    area = currArea2
+                }
+            }
+        }
+    }
+    return area
+};
+
+// height = [1,8,6,2,5,4,8,3,7]
+height = [1,1]
+console.log(maxArea(height))
