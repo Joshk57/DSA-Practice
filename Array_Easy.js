@@ -76,4 +76,25 @@ var kidsWithCandies = function(candies, extraCandies) {
 candies = [2,3,5,1,3], extraCandies = 3
 // candies = [4,2,1,1,2], extraCandies = 1
 // candies = [12,1,12], extraCandies = 10
-console.log(kidsWithCandies(candies, extraCandies))
+// console.log(kidsWithCandies(candies, extraCandies))
+
+
+// 2824 Count Pairs Whose Sum is Less than Target
+
+var countPairs = function(nums, target) {
+    
+    let count = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if ((i >= 0) && (j > i) && (nums[i] + nums[j] < target)) {
+                count++
+            }
+        }
+    }
+    return count
+};
+
+// nums = [-1,1,2,3,1], target = 2
+nums = [-6,2,5,-2,-7,-1,3], target = -2
+console.log(countPairs(nums, target))
