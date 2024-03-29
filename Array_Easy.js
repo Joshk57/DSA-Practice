@@ -56,4 +56,24 @@ var numberOfEmployeesWhoMetTarget = function(hours, target) {
 
 hours = [0,1,2,3,4], target = 2
 // hours = [5,1,4,2,2], target = 6
-console.log(numberOfEmployeesWhoMetTarget(hours, target))
+// console.log(numberOfEmployeesWhoMetTarget(hours, target))
+
+
+// 1431 Kids with the greatest number of candies
+
+var kidsWithCandies = function(candies, extraCandies) {
+    const maxAmt = Math.max(...candies)
+    const newArr = []
+    for (let i = 0; i < candies.length; i++) {
+        if (candies[i] + extraCandies >= maxAmt) {
+            newArr.push(true)
+        } else {
+            newArr.push(false)
+        }
+    }
+    return newArr
+};
+candies = [2,3,5,1,3], extraCandies = 3
+// candies = [4,2,1,1,2], extraCandies = 1
+// candies = [12,1,12], extraCandies = 10
+console.log(kidsWithCandies(candies, extraCandies))
