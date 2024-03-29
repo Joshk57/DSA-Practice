@@ -36,5 +36,24 @@ var maximumWealth = function(accounts) {
 
 // accounts = [[1,2,3],[3,2,1]]
 // accounts = [[1,5],[7,3],[3,5]]
-accounts = [[2,8,7],[7,1,3],[1,9,5]]
-console.log(maximumWealth(accounts))
+// accounts = [[2,8,7],[7,1,3],[1,9,5]]
+// console.log(maximumWealth(accounts))
+
+
+
+// 2798 Number of employees who met the target
+
+var numberOfEmployeesWhoMetTarget = function(hours, target) {
+    
+    let count = 0
+    for (let i = 0; i < hours.length; i++) {
+        if (hours[i] >= target) {
+            count++
+        }
+    }
+    return count
+};
+
+hours = [0,1,2,3,4], target = 2
+// hours = [5,1,4,2,2], target = 6
+console.log(numberOfEmployeesWhoMetTarget(hours, target))
