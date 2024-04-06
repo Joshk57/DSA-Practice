@@ -72,7 +72,6 @@ command = "G()(al)"
 var mostWordsFound = function(sentences) {
     
     let maxCount = 0
-    let count = 0
 
 
     for (let sentence of sentences) {
