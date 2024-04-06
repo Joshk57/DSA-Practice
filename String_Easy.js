@@ -88,3 +88,23 @@ var mostWordsFound = function(sentences) {
 sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
 // sentences = ["please wait", "continue to fight", "continue to win"]
 console.log(mostWordsFound(sentences))
+
+
+
+
+// 1221. Split a String in Balanced Strings
+
+var balancedStringSplit = function(s) {
+    
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === "L") {
+
+        }
+    }
+};
+
+s = "RLRRLLRLRL"
+// s = "RLRRRLLRLL"
+// s = "LLLLRRRR"
+console.log(balancedStringSplit(s))
