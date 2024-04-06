@@ -63,4 +63,29 @@ var interpret = function(command) {
 command = "G()(al)"
 // command = "G()()()()(al)"
 // command = "(al)G(al)()()G"
-console.log(interpret(command))
+// console.log(interpret(command))
+
+
+
+// 2114 Maximum Number of Words Found in Sentences
+
+var mostWordsFound = function(sentences) {
+    
+    let maxCount = 0
+    let count = 0
+
+
+    for (let sentence of sentences) {
+        let words = sentence.split(" "); // Split sentence into words
+        let count = words.length; // Count the number of words
+
+        if (count > maxCount) {
+            maxCount = count; // Update maxCount if necessary
+        }
+    }
+    return maxCount
+};
+
+sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
+// sentences = ["please wait", "continue to fight", "continue to win"]
+console.log(mostWordsFound(sentences))
