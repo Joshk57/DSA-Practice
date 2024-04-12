@@ -87,7 +87,7 @@ var mostWordsFound = function(sentences) {
 
 sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
 // sentences = ["please wait", "continue to fight", "continue to win"]
-console.log(mostWordsFound(sentences))
+// console.log(mostWordsFound(sentences))
 
 
 
@@ -96,15 +96,28 @@ console.log(mostWordsFound(sentences))
 
 var balancedStringSplit = function(s) {
     
+    let lcount = 0
+    let rcount = 0
+    let total = 0
 
     for (let i = 0; i < s.length; i++) {
-        if (s[i] === "L") {
+        if (s[i] === "R") {
+            rcount++
+        } else if (s[i] === "L") {
+            lcount++
+        }
 
+        if (lcount === rcount) {
+            total++
+            lcount = 0
+            rcount = 0
         }
     }
+    return total
 };
 
-s = "RLRRLLRLRL"
+// s = "RLRRLLRLRL"
 // s = "RLRRRLLRLL"
-// s = "LLLLRRRR"
+s = "LLLLRRRR"
 console.log(balancedStringSplit(s))
+
