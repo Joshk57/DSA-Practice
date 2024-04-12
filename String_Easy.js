@@ -119,5 +119,39 @@ var balancedStringSplit = function(s) {
 // s = "RLRRLLRLRL"
 // s = "RLRRRLLRLL"
 s = "LLLLRRRR"
-console.log(balancedStringSplit(s))
+// console.log(balancedStringSplit(s))
 
+
+
+// 1662 Check If Two String Arrays are Equivalent
+
+var arrayStringsAreEqual = function(word1, word2) {
+    let str1 = ""
+    let str2 = ""
+
+    for (let i = 0; i < word1.length; i++) {
+        let char = word1[i].split("")
+
+        for (let i = 0; i < char.length; i++) {
+            str1 += char[i]
+
+        }
+    }
+    
+    for (let i = 0; i < word2.length; i++) {
+        let char2 = word2[i].split("")
+
+        for (let i = 0; i < char2.length; i++) {
+            str2 += char2[i]
+            
+        }
+    }
+
+    return str1 === str2
+};
+
+
+// word1 = ["ab", "c"], word2 = ["a", "bc"]
+// word1 = ["a", "cb"], word2 = ["ab", "c"]
+word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
+console.log(arrayStringsAreEqual(word1, word2))
