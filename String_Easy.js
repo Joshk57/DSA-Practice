@@ -177,4 +177,27 @@ var countMatches = function(items, ruleKey, ruleValue) {
 
 items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], ruleKey = "color", ruleValue = "silver"
 // items = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], ruleKey = "type", ruleValue = "phone"
-console.log(countMatches(items, ruleKey, ruleValue))
+// console.log(countMatches(items, ruleKey, ruleValue))
+
+
+// 1816	Truncate Sentence
+
+var truncateSentence = function(s, k) {
+    
+    let words = s.split(" ")
+    let sent = []
+    let count = 0
+    for (let i = 0; i <= words.length; i++) {
+        if (k === count) {
+            return sent.join(" ")
+        } else {
+            sent.push(words[i])
+            count++
+        }
+    }
+};
+
+s = "Hello how are you Contestant", k = 4
+// s = "What is the solution to this problem", k = 4
+// s = "chopper is not a tanuki", k = 5
+console.log(truncateSentence(s, k))
