@@ -200,4 +200,24 @@ var truncateSentence = function(s, k) {
 s = "Hello how are you Contestant", k = 4
 // s = "What is the solution to this problem", k = 4
 // s = "chopper is not a tanuki", k = 5
-console.log(truncateSentence(s, k))
+// console.log(truncateSentence(s, k))
+
+
+
+// 1528	Shuffle String
+
+var restoreString = function(s, indices) {
+    let arr = new Array(indices);
+    s = s.split("");
+    for (let i = 0; i < s.length; i++) {
+        arr[indices[i]] = s[i];
+    }
+    return arr.join("");
+
+};
+
+
+s = "codeleet", indices = [4,5,6,7,0,2,1,3]
+// s = "abc", indices = [0,1,2]
+console.log(restoreString(s, indices))
+
