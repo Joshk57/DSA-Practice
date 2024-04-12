@@ -154,4 +154,27 @@ var arrayStringsAreEqual = function(word1, word2) {
 // word1 = ["ab", "c"], word2 = ["a", "bc"]
 // word1 = ["a", "cb"], word2 = ["ab", "c"]
 word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
-console.log(arrayStringsAreEqual(word1, word2))
+// console.log(arrayStringsAreEqual(word1, word2))
+
+
+
+// 1773 Count Items Matching a Rule
+
+var countMatches = function(items, ruleKey, ruleValue) {
+
+    let count = 0
+
+    for(let arr of items){
+        const [phone, color, name] = arr
+        if(ruleKey === "type" && ruleValue === phone || ruleKey === "color" 
+         && ruleValue === color || ruleKey === 'name' && ruleValue === name) 
+         
+         count ++
+    }
+    return count
+};
+
+
+items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], ruleKey = "color", ruleValue = "silver"
+// items = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], ruleKey = "type", ruleValue = "phone"
+console.log(countMatches(items, ruleKey, ruleValue))
