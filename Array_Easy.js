@@ -177,23 +177,30 @@ encoded = [1,2,3], first = 1
 
 var leftRightDifference = function(nums) {
     
-    let arr = []
-
-    let leftSum = 0
-    let rightSum = 0
-
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (i === 0) {
-                rightSum += nums[j]
-            }
+    // finding left sum
+    let leftsum=[];
+    for(let i=0;i<nums.length;i++){
+        let sum=0;
+        for(let j=0;j<i;j++){
+            sum+=nums[j]
         }
-        if (rightSum - leftSum < 0) {
-            
-            arr.push(-1 * (rightSum - leftSum))
-        }
+        leftsum.push(sum)
     }
-    return arr
+    // finding right sum
+    let rightsum=[];
+    for(let i=0;i<nums.length;i++){
+        let sum=0;
+        for(let j=i+1;j<nums.length;j++){
+            sum+=nums[j]
+        }
+        rightsum.push(sum)
+    }
+    // finding the modulas of sum by Math.abs operator
+    let result=[]
+    for(let i=0;i<leftsum.length;i++){
+        result.push(Math.abs(leftsum[i]-rightsum[i]))
+    }
+    return result
 };
 
 nums = [10,4,8,3]
