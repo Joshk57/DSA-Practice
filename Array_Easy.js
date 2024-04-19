@@ -146,4 +146,56 @@ var runningSum = function(nums) {
 nums = [1,2,3,4]
 // nums = [1,1,1,1,1]
 // nums = [3,1,2,10,1]
-console.log(runningSum(nums))
+// console.log(runningSum(nums))
+
+
+
+// 2859. Sum of Values at Indices With K Set Bits
+
+var sumIndicesWithKSetBits = function(nums, k) {
+    
+};
+
+nums = [5,10,1,5,2], k = 1
+// nums = [4,3,2,1], k = 2
+// console.log(sumIndicesWithKSetBits(nums, k))
+
+
+
+// 1720. Decode XORed Array
+
+var decode = function(encoded, first) {
+    
+};
+
+encoded = [1,2,3], first = 1
+// encoded = [6,2,7,3], first = 4
+// console.log(decode(encoded, first))
+
+
+// 2574. Left and Right Sum Differences
+
+var leftRightDifference = function(nums) {
+    
+    let arr = []
+
+    let leftSum = 0
+    let rightSum = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (i === 0) {
+                rightSum += nums[j]
+            }
+        }
+        if (rightSum - leftSum < 0) {
+            
+            arr.push(-1 * (rightSum - leftSum))
+        }
+    }
+    return arr
+};
+
+nums = [10,4,8,3]
+// nums = [1]
+console.log(leftRightDifference(nums))
