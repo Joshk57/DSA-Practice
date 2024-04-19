@@ -124,4 +124,26 @@ var smallerNumbersThanCurrent = function(nums) {
 nums = [8,1,2,2,3]
 // nums = [6,5,4,8]
 // nums = [7,7,7,7]
-console.log(smallerNumbersThanCurrent(nums))
+// console.log(smallerNumbersThanCurrent(nums))
+
+
+// 1480 Running Sum of 1d Array
+
+var runningSum = function(nums) {
+    
+    let arr = [nums[0]]
+    let sum = nums[0]
+
+    for (let i = 1; i < nums.length; i++) {
+        sum += nums[i]
+        arr.push(sum)
+    }
+
+    return arr
+};
+
+
+nums = [1,2,3,4]
+// nums = [1,1,1,1,1]
+// nums = [3,1,2,10,1]
+console.log(runningSum(nums))
