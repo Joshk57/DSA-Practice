@@ -1,3 +1,24 @@
+// 3110. Score of a String
+
+
+var scoreOfString = function(s) {
+    const alphabet = "abcdefhijklmnopqrstuvwxyz".split("")
+    
+    let sum = (100 + alphabet.indexOf(s[0]))
+
+    for (let i = 0; i < s.length; i++) {
+        if (alphabet.includes(s[i])) {
+            sum += (100 + )
+        }
+    }
+};
+
+s = "hello"
+// s = "zaz"
+console.log(scoreOfString(s))
+
+
+
 // 1108 Defanging an IP Address
 
 
