@@ -97,4 +97,31 @@ var countPairs = function(nums, target) {
 
 // nums = [-1,1,2,3,1], target = 2
 nums = [-6,2,5,-2,-7,-1,3], target = -2
-console.log(countPairs(nums, target))
+// console.log(countPairs(nums, target))
+
+
+//1365 How Many Numbers Are Smaller Than the Current Number
+
+var smallerNumbersThanCurrent = function(nums) {
+    
+    let arr = []
+    
+    let count = 0
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums.length; j++) {
+            if (i !== j && nums[i] > nums[j]) {
+                count++
+            }
+
+            
+        }
+        arr.push(count)
+        count = 0
+    }
+    return arr
+};
+
+nums = [8,1,2,2,3]
+// nums = [6,5,4,8]
+// nums = [7,7,7,7]
+console.log(smallerNumbersThanCurrent(nums))
