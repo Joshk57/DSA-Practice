@@ -205,4 +205,23 @@ var leftRightDifference = function(nums) {
 
 nums = [10,4,8,3]
 // nums = [1]
-console.log(leftRightDifference(nums))
+// console.log(leftRightDifference(nums))
+
+
+
+
+// 1588. Sum of All Odd Length Subarrays
+
+var sumOddLengthSubarrays = function(arr) {
+    
+    let count = 0
+
+    for (let i = 0; i < arr.length; i++) {
+        
+    }
+};
+
+
+arr = [1,4,2,5,3]
+// arr = [1,2]
+console.log(sumOddLengthSubarrays(arr))
