@@ -267,3 +267,25 @@ var toLowerCase = function(s) {
 // s = "here"
 // s = "LOVELY"
 // console.log(toLowerCase(s))
+
+
+
+// 2810. Faulty Keyboard
+
+var finalString = function(s) {
+    
+    let str = ""
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'i') {
+            str = str.split("").reverse().join("")
+        } else {
+            str += s[i]
+        }
+    }
+    return str
+};
+
+s = "string"
+// s = "poiinter"
+// console.log(finalString(s))
