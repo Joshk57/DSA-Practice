@@ -247,24 +247,18 @@ s = "codeleet", indices = [4,5,6,7,0,2,1,3]
 // 709. To Lower Case
 
 var toLowerCase = function(s) {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    let str = ""
-    let hash = {}
+    let ans = '';
 
-    for (let i = 0; i < alphabet.length; i++) {
-        if (!hash[alphabet[i]]) {
-            hash[alphabet[i].toUpperCase()] = alphabet[i]
+    for(const char of s){
+        const curr = char.charCodeAt(0) - 65;
+        if(curr >= 0 && curr <= 25){
+            ans+= String.fromCharCode(97+curr);
+        }else{
+            ans+=char;
         }
     }
-    console.log(hash)
-    for (let i = 0; i < s.length; i++) {
-        if (!alphabet.includes(s[i])) {
-            str += hash[s[i]] 
-        } else {
-            str += s[i]
-        }
-    }
-    return str
+
+    return ans;
 
     
 };
