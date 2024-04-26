@@ -1,21 +1,21 @@
 // 3110. Score of a String
 
 
-var scoreOfString = function(s) {
-    const alphabet = "abcdefhijklmnopqrstuvwxyz".split("")
+// var scoreOfString = function(s) {
+//     const alphabet = "abcdefhijklmnopqrstuvwxyz".split("")
     
-    let sum = (100 + alphabet.indexOf(s[0]))
+//     let sum = (100 + alphabet.indexOf(s[0]))
 
-    for (let i = 0; i < s.length; i++) {
-        if (alphabet.includes(s[i])) {
-            sum += (100 + )
-        }
-    }
-};
+//     for (let i = 0; i < s.length; i++) {
+//         if (alphabet.includes(s[i])) {
+//             sum += (100 + )
+//         }
+//     }
+// };
 
-s = "hello"
+// s = "hello"
 // s = "zaz"
-console.log(scoreOfString(s))
+// console.log(scoreOfString(s))
 
 
 
@@ -240,5 +240,36 @@ var restoreString = function(s, indices) {
 
 s = "codeleet", indices = [4,5,6,7,0,2,1,3]
 // s = "abc", indices = [0,1,2]
-console.log(restoreString(s, indices))
+// console.log(restoreString(s, indices))
 
+
+
+// 709. To Lower Case
+
+var toLowerCase = function(s) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    let str = ""
+    let hash = {}
+
+    for (let i = 0; i < alphabet.length; i++) {
+        if (!hash[alphabet[i]]) {
+            hash[alphabet[i].toUpperCase()] = alphabet[i]
+        }
+    }
+    console.log(hash)
+    for (let i = 0; i < s.length; i++) {
+        if (!alphabet.includes(s[i])) {
+            str += hash[s[i]] 
+        } else {
+            str += s[i]
+        }
+    }
+    return str
+
+    
+};
+
+// s = "Hello"
+// s = "here"
+// s = "LOVELY"
+// console.log(toLowerCase(s))
