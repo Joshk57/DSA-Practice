@@ -305,3 +305,37 @@ return arr.join("");
 s = "codeleet", indices = [4,5,6,7,0,2,1,3]
 // s = "abc", indices = [0,1,2]
 console.log(restoreString(s, indices))
+
+
+
+// 2325. Decode the Message
+
+var decodeMessage = function(key, message) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+    let hash = {}
+    let str = ""
+    for (let i = 0; i < key.length; i++) {
+        for (let j = 0; j < alphabet.length; j++) {
+            if (key[i] === " ") {
+                continue
+            } else if (!hash[alphabet[i]]) {
+                hash[alphabet[i]] = key[i]
+            }
+        }
+    }
+
+    for (let i = 0; i < message.length; i++) {
+        if (hash[message[i]]) {
+            str += hash[message[i]]
+        } else {
+            str += message[i]
+        }
+    }
+    console.log(hash)
+    return str
+};
+
+
+key = "the quick brown fox jumps over the lazy dog", message = "vkbs bs t suepuv"
+// key = "eljuxhpwnyrdgtqkviszcfmabo", message = "zwx hnfx lqantp mnoeius ycgk vcnjrdb"
+console.log(decodeMessage(key, message))
