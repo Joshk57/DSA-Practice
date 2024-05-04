@@ -289,3 +289,15 @@ var finalString = function(s) {
 s = "string"
 // s = "poiinter"
 // console.log(finalString(s))
+
+
+// 1528. Shuffle String
+
+var restoreString = function(s, indices) {
+    let arr = new Array(indices);
+s = s.split("");
+for (let i = 0; i < s.length; i++) {
+    arr[indices[i]] = s[i];
+}
+return arr.join("");
+};
