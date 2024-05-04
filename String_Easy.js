@@ -301,3 +301,7 @@ for (let i = 0; i < s.length; i++) {
 }
 return arr.join("");
 };
+
+s = "codeleet", indices = [4,5,6,7,0,2,1,3]
+// s = "abc", indices = [0,1,2]
+console.log(restoreString(s, indices))
