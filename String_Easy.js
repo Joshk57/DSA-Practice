@@ -304,7 +304,7 @@ return arr.join("");
 
 s = "codeleet", indices = [4,5,6,7,0,2,1,3]
 // s = "abc", indices = [0,1,2]
-console.log(restoreString(s, indices))
+// console.log(restoreString(s, indices))
 
 
 
@@ -318,8 +318,8 @@ var decodeMessage = function(key, message) {
         for (let j = 0; j < alphabet.length; j++) {
             if (key[i] === " ") {
                 continue
-            } else if (!hash[alphabet[i]]) {
-                hash[alphabet[i]] = key[i]
+            } else if (!hash[key[i]]) {
+                hash[key[i]] = alphabet[i]
             }
         }
     }
@@ -338,4 +338,26 @@ var decodeMessage = function(key, message) {
 
 key = "the quick brown fox jumps over the lazy dog", message = "vkbs bs t suepuv"
 // key = "eljuxhpwnyrdgtqkviszcfmabo", message = "zwx hnfx lqantp mnoeius ycgk vcnjrdb"
-console.log(decodeMessage(key, message))
+// console.log(decodeMessage(key, message))
+
+
+// 2108. Find First Palindromic String in the Array
+
+var firstPalindrome = function(words) {
+    
+    for (let i = 0; i < words.length; i++) {
+        if (isPalindrome(words[i])) {
+            return words[i]
+        }
+    }
+    return ""
+};
+
+function isPalindrome(str) {
+    return str === str.split("").reverse().join("")
+}
+
+// words = ["abc","car","ada","racecar","cool"]
+words = ["notapalindrome","racecar"]
+// words = ["def","ghi"]
+console.log(firstPalindrome(words))
