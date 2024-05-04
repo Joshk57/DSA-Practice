@@ -361,3 +361,23 @@ function isPalindrome(str) {
 words = ["notapalindrome","racecar"]
 // words = ["def","ghi"]
 console.log(firstPalindrome(words))
+
+
+
+
+// 2194. Cells in a Range on an Excel Sheet
+
+var cellsInRange = function(s) {
+    let cells = s.split(":")
+
+    for (let i = cells.length - 1 ; i >= 0; i--) {
+        let maxNum = cells[0]
+        
+    }
+    
+    return cells
+};
+
+s = "K1:L2"
+// s = "A1:F1"
+console.log(cellsInRange(s))
