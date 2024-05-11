@@ -224,4 +224,15 @@ var sumOddLengthSubarrays = function(arr) {
 
 arr = [1,4,2,5,3]
 // arr = [1,2]
-console.log(sumOddLengthSubarrays(arr))
+// console.log(sumOddLengthSubarrays(arr))
+
+
+// 2574. Left and Right Sum Differences
+
+var leftRightDifference = function(nums) {
+    
+};
+
+nums = [10,4,8,3]
+// nums = [1]
+console.log(leftRightDifference(nums))

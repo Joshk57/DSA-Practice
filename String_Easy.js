@@ -442,4 +442,4 @@ allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
 // allowed = "abc", words = ["a","b","c","ab","ac","bc","abc"]
 // allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
 
-console.log(countConsistentStrings(allowed, words))
+// console.log(countConsistentStrings(allowed, words))
