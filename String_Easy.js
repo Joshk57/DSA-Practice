@@ -380,4 +380,34 @@ var cellsInRange = function(s) {
 
 s = "K1:L2"
 // s = "A1:F1"
-console.log(cellsInRange(s))
+// console.log(cellsInRange(s))
+
+// 2000. Reverse Prefix of Word
+
+var reversePrefix = function(word, ch) {
+    let n = word.length;
+
+    //create a list to store the characters before the CHARACTER(ch)
+    let pre = [];
+    // suf will store the remaining suffix if there is any 
+    let suf = "";
+    for(let i=0; i<n; i++) {
+        pre.push(word[i]);
+
+        // check if the current character is the character wanted
+        if(word[i] == ch) {
+            // if so then put the remaining character to suf and break the loop
+            suf = word.substr(i+1, n-1);
+            break;
+        }
+        // if the wanted character is not found, then just leave the pre empty in case it is easy to check
+        if(i+1 == n) pre = [];
+    }
+    //return `word` itself if pre is empty which means the wanted character is not found or return the result in which prefix is reversed and suffix is added
+    return pre.length == 0 ? word : pre.reverse().join('') + suf;
+};
+
+word = "abcdefd", ch = "d"
+// word = "xyxzxe", ch = "z"
+// word = "abcd", ch = "z"
+console.log(reversePrefix(word, ch))
