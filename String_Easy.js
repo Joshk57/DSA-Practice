@@ -410,4 +410,18 @@ var reversePrefix = function(word, ch) {
 word = "abcdefd", ch = "d"
 // word = "xyxzxe", ch = "z"
 // word = "abcd", ch = "z"
-console.log(reversePrefix(word, ch))
+// console.log(reversePrefix(word, ch))
+
+
+
+
+// 1684. Count the Number of Consistent Strings
+var countConsistentStrings = function(allowed, words) {
+    
+};
+
+allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
+// allowed = "abc", words = ["a","b","c","ab","ac","bc","abc"]
+// allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
+
+console.log(countConsistentStrings(allowed, words))
