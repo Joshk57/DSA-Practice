@@ -417,7 +417,25 @@ word = "abcdefd", ch = "d"
 
 // 1684. Count the Number of Consistent Strings
 var countConsistentStrings = function(allowed, words) {
-    
+    const hashmap = new Map();
+    let output = 0;
+
+    for (let i = 0; i < allowed.length; i++) {
+        hashmap.set(allowed[i], 1);
+    }
+
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        output++;
+        for (let j = 0; j < word.length; j++) {
+            if (!hashmap.has(word[j])) {
+                output--;
+                break;
+            }
+        }
+    }
+
+    return output;
 };
 
 allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
