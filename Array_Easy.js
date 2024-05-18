@@ -258,4 +258,14 @@ var leftRightDifference = function(nums) {
 
 nums = [10,4,8,3]
 // nums = [1]
-console.log(leftRightDifference(nums))
+// console.log(leftRightDifference(nums))
+
+
+//2373. Largest Local Values in a Matrix
+var largestLocal = function(grid) {
+    
+};
+
+grid = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]]
+// grid = [[1,1,1,1,1],[1,1,1,1,1],[1,1,2,1,1],[1,1,1,1,1],[1,1,1,1,1]]
+console.log(largestLocal(grid))
