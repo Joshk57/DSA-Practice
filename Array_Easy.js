@@ -287,14 +287,21 @@ var largestLocal = function(grid) {
 
 grid = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]]
 // grid = [[1,1,1,1,1],[1,1,1,1,1],[1,1,2,1,1],[1,1,1,1,1],[1,1,1,1,1]]
-console.log(largestLocal(grid))
+// console.log(largestLocal(grid))
 
 
 
 //3065. Minimum Operations to Exceed Threshold Value I
 
 var minOperations = function(nums, k) {
-    
+    let arr=[]
+    for(i=0;i<nums.length;i++){
+       
+        if(nums[i]<k){
+            arr.push(nums[i])
+        }
+    }
+    return arr.length;
 };
 
 nums = [2,11,10,1,3], k = 10
