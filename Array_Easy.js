@@ -313,7 +313,18 @@ nums = [2,11,10,1,3], k = 10
 // 1684. Count the Number of Consistent Strings
 
 var countConsistentStrings = function(allowed, words) {
-    
+    let count = 0;
+    for (let word of words) {
+        let bool = true;
+        for (let char of word) {
+            if (!allowed.includes(char)) {
+                bool = false;
+                break;
+            }
+        }
+        if (bool) count++;
+    }
+    return count;
 };
 
 allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
