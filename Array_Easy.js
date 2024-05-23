@@ -370,3 +370,17 @@ words = ["alice","bob","charlie"], s = "abc"
 // words = ["an","apple"], s = "a"
 // words = ["never","gonna","give","up","on","you"], s = "ngguoy"
 console.log(isAcronym(words, s))
+
+// 1748. Sum of Unique Elements
+
+var sumOfUnique = function(nums) {
+    let arr = nums.filter((v) => nums.indexOf(v) === nums.lastIndexOf(v))
+        .reduce((sum, cur) => sum + cur, 0);
+
+    return arr;    
+};
+
+nums = [1,2,3,2]
+// nums = [1,1,1,1,1]
+// nums = [1,2,3,4,5]
+console.log(sumOfUnique(nums))
