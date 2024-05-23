@@ -307,4 +307,16 @@ var minOperations = function(nums, k) {
 nums = [2,11,10,1,3], k = 10
 // nums = [1,1,2,4,9], k = 1
 // nums = [1,1,2,4,9], k = 9
-console.log(minOperations(nums, k))
+// console.log(minOperations(nums, k))
+
+
+// 1684. Count the Number of Consistent Strings
+
+var countConsistentStrings = function(allowed, words) {
+    
+};
+
+allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
+// allowed = "abc", words = ["a","b","c","ab","ac","bc","abc"]
+// allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
+console.log(countConsistentStrings(allowed, words))
