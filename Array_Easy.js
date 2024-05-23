@@ -357,7 +357,13 @@ mat = [[1,2,3],
 //2828. Check if a String Is an Acronym of Words
 
 var isAcronym = function(words, s) {
-    
+
+    let res = ''
+    for(let v of words){
+        res += v[0]
+    }
+    return res === s
+        
 };
 
 words = ["alice","bob","charlie"], s = "abc"
