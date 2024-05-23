@@ -351,4 +351,16 @@ mat = [[1,2,3],
 //         [1,1,1,1],
 //         [1,1,1,1]]
 //         mat = [[5]]
-console.log(diagonalSum(mat))
+// console.log(diagonalSum(mat))
+
+
+//2828. Check if a String Is an Acronym of Words
+
+var isAcronym = function(words, s) {
+    
+};
+
+words = ["alice","bob","charlie"], s = "abc"
+// words = ["an","apple"], s = "a"
+// words = ["never","gonna","give","up","on","you"], s = "ngguoy"
+console.log(isAcronym(words, s))
