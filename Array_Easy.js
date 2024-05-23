@@ -330,4 +330,22 @@ var countConsistentStrings = function(allowed, words) {
 allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
 // allowed = "abc", words = ["a","b","c","ab","ac","bc","abc"]
 // allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
-console.log(countConsistentStrings(allowed, words))
+// console.log(countConsistentStrings(allowed, words))
+
+
+
+// 1572. Matrix Diagonal Sum
+
+var diagonalSum = function(mat) {
+    
+};
+
+mat = [[1,2,3],
+        [4,5,6],
+        [7,8,9]]
+// mat = [[1,1,1,1],
+//         [1,1,1,1],
+//         [1,1,1,1],
+//         [1,1,1,1]]
+//         mat = [[5]]
+console.log(diagonalSum(mat))
