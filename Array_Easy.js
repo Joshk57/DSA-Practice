@@ -456,4 +456,18 @@ var removeOuterParentheses = function(s) {
 s = "(()())(())"
 // s = "(()())(())(()(()))"
 // s = "()()"
-console.log(removeOuterParentheses(s))
+// console.log(removeOuterParentheses(s))
+
+
+
+// 2315. Count Asterisks
+
+var countAsterisks = function(s) {
+    
+};
+
+
+s = "l|*e*et|c**o|*de|"
+// s = "iamprogrammer"
+// s = "yo|uar|e**|b|e***au|tifu|l"
+console.log(countAsterisks(s))
