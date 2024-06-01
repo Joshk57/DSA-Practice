@@ -432,4 +432,28 @@ var uniqueMorseRepresentations = function(words) {
 
 words = ["gin","zen","gig","msg"]
 // words = ["a"]
-console.log(uniqueMorseRepresentations(words))
+// console.log(uniqueMorseRepresentations(words))
+
+
+//1021. Remove Outermost Parentheses
+
+var removeOuterParentheses = function(s) {
+    let openCount = 0;
+    let output = "";
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === "(") {
+            if (openCount) output += s[i];
+            openCount++;
+        }
+        else if (s[i] === ")") {
+            openCount--;
+            if (openCount) output += s[i];
+        }
+    }
+    return output;
+};
+
+s = "(()())(())"
+// s = "(()())(())(()(()))"
+// s = "()()"
+console.log(removeOuterParentheses(s))
