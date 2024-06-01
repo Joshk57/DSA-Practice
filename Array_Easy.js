@@ -383,4 +383,16 @@ var sumOfUnique = function(nums) {
 nums = [1,2,3,2]
 // nums = [1,1,1,1,1]
 // nums = [1,2,3,4,5]
-console.log(sumOfUnique(nums))
+// console.log(sumOfUnique(nums))
+
+
+// 804. Unique Morse Code Words
+
+var uniqueMorseRepresentations = function(words) {
+    
+};
+
+
+words = ["gin","zen","gig","msg"]
+// words = ["a"]
+console.log(uniqueMorseRepresentations(words))
