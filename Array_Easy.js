@@ -520,4 +520,26 @@ var replaceDigits = function(s) {
 
 s = "a1c1e1"
 // s = "a1b2c3d4e"
-console.log(replaceDigits(s))
+// console.log(replaceDigits(s))
+
+
+
+// 2744. Find Maximum Number of String Pairs
+
+var maximumNumberOfStringPairs = function(words) {
+    let count = 0
+    for(let i=0;i<words.length;i++){
+        for(let j=i+1;j<words.length;j++){
+            if(words[i].split("").reverse().join("") === words[j]){
+                count++
+            }
+        }
+    }
+    return count    
+};
+
+
+words = ["cd","ac","dc","ca","zz"]
+// words = ["ab","ba","cc"]
+// words = ["aa","ab"]
+// console.log(makeSmallestPalindrome(words))
