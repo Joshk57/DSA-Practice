@@ -495,4 +495,16 @@ var makeSmallestPalindrome = function(s) {
 s = "egcfe"
 // s = "abcd"
 // s = "seven"
-console.log(makeSmallestPalindrome(s))
+// console.log(makeSmallestPalindrome(s))
+
+
+// 1844. Replace All Digits with Characters
+
+
+var replaceDigits = function(s) {
+    
+};
+
+s = "a1c1e1"
+// s = "a1b2c3d4e"
+console.log(replaceDigits(s))
