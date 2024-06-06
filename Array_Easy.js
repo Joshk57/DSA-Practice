@@ -475,4 +475,16 @@ var countAsterisks = function(s) {
 s = "l|*e*et|c**o|*de|"
 // s = "iamprogrammer"
 // s = "yo|uar|e**|b|e***au|tifu|l"
-console.log(countAsterisks(s))
+// console.log(countAsterisks(s))
+
+
+// 2697. Lexicographically Smallest Palindrome
+
+var makeSmallestPalindrome = function(s) {
+    
+};
+
+s = "egcfe"
+// s = "abcd"
+// s = "seven"
+console.log(makeSmallestPalindrome(s))
