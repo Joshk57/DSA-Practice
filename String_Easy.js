@@ -443,3 +443,15 @@ allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
 // allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
 
 // console.log(countConsistentStrings(allowed, words))
+
+
+// 2309. Greatest English Letter in Upper and Lower Case
+
+var greatestLetter = function(s) {
+    
+};
+
+s = "lEeTcOdE"
+// s = "arRAzFif"
+// s = "AbCdEfGhIjK"
+console.log(greatestLetter(s))
