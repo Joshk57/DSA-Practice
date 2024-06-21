@@ -461,4 +461,16 @@ var greatestLetter = function(s) {
 s = "lEeTcOdE"
 // s = "arRAzFif"
 // s = "AbCdEfGhIjK"
-console.log(greatestLetter(s))
+// console.log(greatestLetter(s))
+
+
+
+//1047. Remove All Adjacent Duplicates In String
+
+var removeDuplicates = function(s) {
+    
+};
+
+s = "abbaca"
+// s = "azxxzy"
+// console.log(removeDuplicates(s))
