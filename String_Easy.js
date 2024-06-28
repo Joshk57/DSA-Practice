@@ -539,7 +539,16 @@ n = 3
 //2283. Check if Number Has Equal Digit Count and Digit Value
 
 var digitCount = function(num) {
-    
+    const arr = num.split("");
+
+    for (let i = 0; i < arr.length; i++) {
+        let count = arr.filter((e) => i == e).length;
+
+        if (Number(arr[i]) !== count) {
+            return false;
+        }
+    }
+    return true;    
 };
 
 num = "1210"
