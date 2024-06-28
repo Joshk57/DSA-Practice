@@ -533,4 +533,15 @@ var fizzBuzz = function(n) {
 n = 3
 // n = 5
 // n = 15
-console.log(fizzBuzz(n))
+// console.log(fizzBuzz(n))
+
+
+//2283. Check if Number Has Equal Digit Count and Digit Value
+
+var digitCount = function(num) {
+    
+};
+
+num = "1210"
+// num = "030"
+console.log(digitCount(num))
