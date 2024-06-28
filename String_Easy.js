@@ -511,3 +511,18 @@ s = "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
 // s = "hello world 5 x 5"
 // s = "sunset is at 7 51 pm overnight lows will be in the low 50 and 60 s"
 // console.log(areNumbersAscending(s))
+
+
+
+//412 Fizz Buzz
+
+var fizzBuzz = function(n) {
+    
+
+};
+
+
+n = 3
+// n = 5
+// n = 15
+console.log(fizzBuzz(n))
