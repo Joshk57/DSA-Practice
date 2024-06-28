@@ -502,7 +502,8 @@ s = "abbaca"
 //2042. Check if Numbers Are Ascending in a Sentence
 
 var areNumbersAscending = function(s) {
-    
+    s.match(/\d+/g).every((_, index, arr) => (index < arr.length - 1 ? arr[index + 1] - arr[index] > 0 : true));
+
 };
 
 
