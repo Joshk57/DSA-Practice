@@ -518,6 +518,14 @@ s = "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
 
 var fizzBuzz = function(n) {
     
+    let arr=[]
+    for(let i=1;i<=n;i++){
+        if(i%3==0&&i%5==0) arr[i-1]="FizzBuzz"
+        else if(i%3==0)    arr[i-1]="Fizz"
+        else if(i%5==0)    arr[i-1]="Buzz"
+        else               arr[i-1]=''+i
+    }
+    return arr
 
 };
 
